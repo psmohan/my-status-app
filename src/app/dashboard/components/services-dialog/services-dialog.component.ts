@@ -1,3 +1,9 @@
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ServiceService } from '../../services/service.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SpinnerService } from 'src/app/services/spinner.service';
+
 @Component({
   selector: 'app-service-dialog',
   templateUrl: './services-dialog.component.html',
