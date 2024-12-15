@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Add New Incident</h2>
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Incident Name</mat-label>
+        <input matInput [(ngModel)]="incident.name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="incident.description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Issue Type</mat-label>
+        <mat-select [(ngModel)]="incident.issue">
+            <mat-option *ngFor="let issue of issues" [value]="issue">{{ issue }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="incident.status">
+            <mat-option *ngFor="let status of statuses" [value]="status">{{ status }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button color="warn" (click)="closeDialog()">Cancel</button>
+    <button mat-button color="primary" (click)="saveIncident()">Save</button>
+</mat-dialog-actions>

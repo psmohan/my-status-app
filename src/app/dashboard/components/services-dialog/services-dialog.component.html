@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Add New Service</h2>
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Service Name</mat-label>
+        <input matInput [(ngModel)]="service.name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="service.status">
+            <mat-option *ngFor="let status of statuses" [value]="status">{{ status }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button color="warn" (click)="closeDialog()">Cancel</button>
+    <button mat-button color="primary" (click)="saveService()">Save</button>
+</mat-dialog-actions>
