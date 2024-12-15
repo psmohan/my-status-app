@@ -13,6 +13,12 @@ import { map, take } from 'rxjs/operators';
 })
 export class AuthGuard implements CanActivate {
   constructor(private auth: AngularFireAuth, private router: Router) {}
+  /**
+   * Determines if the route can be activated based on user authentication status.
+   * @param route Information about the route that is being accessed.
+   * @param state Information about the router state.
+   * @returns Observable<boolean> - Emits `true` if user is authenticated, `false` otherwise.
+   */
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot

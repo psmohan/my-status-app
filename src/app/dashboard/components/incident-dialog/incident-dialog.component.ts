@@ -31,24 +31,34 @@ export class IncidentDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
+  /**
+   * Validates the incident fields and sends the data to the backend.
+   * On success, shows a confirmation message and closes the dialog.
+   * On failure, shows an error notification.
+   */
   saveIncident(): void {
     if (
       this.incident.name.trim() === '' ||
       this.incident.description.trim() === ''
     ) {
+      // Ensures all required fields are filled before proceeding
       this.snackBar.open('Please fill in all fields!', 'Close', {
         duration: 3000,
       });
       return;
     }
+
+    // Calls the service to save the incident
     this.incidentService.addIncident(this.incident).subscribe(
       (response) => {
+        // Success: notify the user and close the dialog
         this.snackBar.open('Incident added successfully!', 'Close', {
           duration: 3000,
         });
         this.dialogRef.close();
       },
       (error) => {
+        // Failure: notify the user of the error
         this.snackBar.open('Error adding incident.', 'Close', {
           duration: 3000,
         });
@@ -56,6 +66,9 @@ export class IncidentDialogComponent {
     );
   }
 
+  /**
+   * Closes the dialog without saving changes.
+   */
   closeDialog(): void {
     this.dialogRef.close();
   }

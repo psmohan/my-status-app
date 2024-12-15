@@ -22,7 +22,7 @@ import { LoginComponent } from './auth/login/login.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase), // Initializes Firebase with the provided environment configuration
     AngularFireAuthModule,
     MatProgressSpinnerModule,
     HttpClientModule,
@@ -31,6 +31,8 @@ import { LoginComponent } from './auth/login/login.component';
     MatButtonModule,
   ],
   providers: [SpinnerService],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent, // The root component that is bootstrapped when the app starts
+  ],
 })
 export class AppModule {}
