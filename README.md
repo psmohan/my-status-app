@@ -57,20 +57,6 @@ Ensure you have enabled the following in your Firebase console:
 - Firestore Database: Add a Firestore database to manage the app's data.
 - Authentication: Enable Google sign-in under the Authentication section.
 
-### Folder Structure
-src/
-├── app/
-│   ├── components/
-│   │   ├── navbar/
-│   │   ├── incidents/
-│   │   ├── services/
-│   ├── services/
-│   │   ├── incident.service.ts
-│   │   ├── service.service.ts
-├── environments/
-│   ├── environment.ts
-│   ├── environment.prod.ts
-
 ### Deployment
 You can deploy the app using Firebase Hosting:
 1. Install the Firebase CLI globally:
