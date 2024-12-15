@@ -1,5 +1,8 @@
 # StatusPageApp
 
+## App Live Deployment Link
+https://mohan-project-18eca.web.app/login
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 # Status Page App
