@@ -1,12 +1,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: process.env['myfirebase.ak'],
-    authDomain: process.env['myfirebase.ad'],
-    projectId: process.env['myfirebase.pi'],
-    storageBucket: process.env['myfirebase.sb'],
-    messagingSenderId: process.env['myfirebase.msi'],
-    appId: process.env['myfirebase.ai'],
-    measurementId: process.env['myfirebase.mid'],
+    apiKey: 'AIzaSyCTOjT-buZnbHivqkAV0CkZ8TUq7QdYS-k',
+    authDomain: 'mohan-project-18eca.firebaseapp.com',
+    projectId: 'mohan-project-18eca',
+    storageBucket: 'mohan-project-18eca.firebasestorage.app',
+    messagingSenderId: '511257823979',
+    appId: '1:511257823979:web:b827b9e35d84393a2b8cae',
+    measurementId: 'G-12S5Z53VHE',
   },
+  firestoreDatabaseId: 'status-app',
 };
