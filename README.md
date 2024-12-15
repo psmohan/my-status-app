@@ -68,8 +68,6 @@ You can deploy the app using Firebase Hosting:
 4. Deploy the app:
    firebase deploy
 
-## License
-This project is licensed under the MIT License.
 
 ## Further help
 
